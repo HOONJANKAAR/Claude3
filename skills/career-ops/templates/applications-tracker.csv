@@ -1,0 +1,2 @@
+date_added,company,role,location,score,status,url,report_path,cv_path,next_action,next_action_date,notes
+2026-01-01,Example Co,Senior Backend Engineer,Remote (US),4,applied,https://example.com/jobs/123,career-ops/reports/example-co-senior-backend-engineer-2026-01-01.md,career-ops/cv/tailored/example-co-senior-backend-engineer.md,follow up if no response,2026-01-15,"Referral from J. Smith; example row, safe to delete"

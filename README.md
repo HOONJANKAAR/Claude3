@@ -1,103 +1,53 @@
-# AI-Chat-Assistant
->This React version evolved from an [original HTML/CSS implementation](https://github.com/usualdork/EndlessClaude). <br>
-Because using vanilla HTML/CSS/JS is like saying "I use Windows" when you could say "I use Arch BTW" 😉 <br>
-![image](https://github.com/user-attachments/assets/bc15e912-346b-4bec-8641-8c19802c93f1)
+# career-ops
 
+Open-source AI job search that runs locally in your AI coding CLI. No
+servers, no accounts, no data leaving your machine except the web requests
+needed to read job postings you point it at.
 
-A modern, React-based AI chat interface that leverages the power of Puter.js API for free, unlimited AI interactions. Experience the next generation of web-based AI chat interfaces. 
+career-ops is a [Claude Code plugin](https://code.claude.com/docs/en/plugins)
+skill that turns your CLI into a job-search assistant:
 
-🌐 Live Demo: https://guify.ct.ws
+- **Scan** job portals and career pages (or a pasted list of listing URLs)
+  for roles matching your criteria.
+- **Evaluate** every listing into a structured, eight-section (A–H) report —
+  role summary, requirements match, comp, company signals, location/work
+  arrangement, growth trajectory, application effort, and red flags — ending
+  in an overall **1–5 fit score** and a recommendation.
+- **Tailor** your CV to each role you decide to pursue, without inventing
+  experience you don't have.
+- **Track** every application in a single local CSV: status, follow-up
+  dates, and links to the report and tailored CV for that role.
 
-  ![image](https://github.com/user-attachments/assets/a46b0c45-4394-44b2-ac50-a43021f8647e)
+Everything career-ops produces (your resume, evaluation reports, and the
+application tracker) is written as plain files inside a `career-ops/`
+directory in *your own project* — never inside this plugin's install
+directory.
 
+## Install
 
-## ✨ Features
-- 🎭 Multiple chat support with conversation management
-- 🎨 Sleek, modern UI with cyberpunk-inspired design
-- 📱 Fully responsive design for all devices
-- ⚡ Real-time streaming responses
-- 🔄 Chat history management
-- 🎛️ Model selection (Claude and ChatGPT)
-- ⌨️ Customizable enter key behavior
-- 🌓 Dark mode optimized
-- 🔄 Real-time chat updates
+Add this repo as a plugin marketplace, then install the plugin:
 
-## 🚀 React vs HTML+CSS+JS: Evolution of a Developer
-Choosing React over traditional HTML+CSS+JS is a statement of embracing modern development practices. Here's why:
-<div align="center">
-
-| Feature               | Old HTML/CSS/JS          | React Implementation     |
-|-----------------------|--------------------------|--------------------------|
-| Component Reuse       | Copy-paste chaos         | DRY Component System     |
-| State Management      | Global variables         | Hooks Context API        |
-| Styling               | CSS spaghetti            | Material-UI + Emotion    |
-| DOM Updates           | Manual manipulation      | Virtual DOM Magic        |
-| Code Organization     | Separate files           | Co-located Components    |
-| Build Process         | Script tags              | Modern toolchain (Vite)  |
-</div>
-
-## 🤖 Puter API Integration
-This project leverages [Puter's Free OpenAI and Claude API](https://developer.puter.com/tutorials/free-unlimited-openai-api/) to provide:
-
-- 🆓 Free access to GPT-4o and Claude 3.5 Sonnet
-- 🔑 No API keys required
-- ⚡ Real-time streaming
-- 🌐 Global CDN caching
-
-## 🛠️ Tech Stack
-- Frontend: React 18 + Material-UI 5
-- State Management: React Hooks
-- Styling: Emotion CSS-in-JS
-- Animation: Framer Motion
-- AI Integration: Puter.js SDK
-
-## 📦 Installation
-1. Clone the repo
-```bash
-git clone https://github.com/usualdork/AI-Chat-Assistant.git
 ```
-2. Install dependencies
-```bash
-npm install
-```
-3. Start development server
-```bash
-npm start
+/plugin marketplace add <owner>/career-ops
+/plugin install career-ops
 ```
 
-## 🌐 Deployment
-The project is configured for zero-config deployment to:
-- Vercel
-- Netlify
-- GitHub Pages
-```bash
-npm run build && npm run preview
-```
+## Use
 
-## 🎯 Key Improvements Over Traditional Approach
-1. State Management
-- Old: Complex JavaScript event listeners and manual state tracking
-- New: React's useState and useEffect hooks for clean state management
-2. Component Architecture
-- Old: Monolithic HTML files with repeated code
-- New: Reusable React components with clear separation of concerns
-3. Styling Approach
-- Old: Global CSS with potential conflicts
-- New: Scoped CSS-in-JS with Emotion and MUI's styling system
+From any project, just ask, for example:
 
-## 🤝 Contributing
-1. Fork the Project
-2. Create your Feature Branch `(git checkout -b feature/AmazingFeature)`
-3. Commit your Changes `(git commit -m 'Add some AmazingFeature')`
-4. Push to the Branch `(git push origin feature/AmazingFeature)`
-5. Open a Pull Request
+- "Find me senior backend roles, remote, US timezone, no on-call-heavy
+  teams."
+- "Evaluate this listing: <url>"
+- "Score these three postings and tell me which to apply to."
+- "Tailor my resume for the Example Co posting."
+- "What's the status of my applications? Anything I need to follow up on?"
 
-## 📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+The first time you use it in a project, it'll ask for your base resume and
+set up the `career-ops/` workspace. See
+[`skills/career-ops/SKILL.md`](skills/career-ops/SKILL.md) for the full
+workflow and rubric.
 
-## Crafted with ❤️ by
-`@usualdork` <br>
-[![GitHub Profile](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/usualdork)
+## License
 
-*⭐️ If you found this project interesting, please consider giving it a star!*
-
+MIT — see [LICENSE](LICENSE).
